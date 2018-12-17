@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <link href="node_modules/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <script src="node_modules/vis/dist/vis.js"></script>
+  <script src="js/graph.js"></script>
+  <title>Connected Components Maximization</title>
+</head>
+
+<body>
+  <div id="TPDesc">
+    <h2 id="DescHeader">TP N°4 : Les points d'articulations dans un graphe non-orienté</h2>
+    <p id="DescPara">
+        Le problème consiste à trouver les points d'articulation dans un graphe non orienté.<br>
+        Ce problème est un grand classique en algorithmique et il existe diverses méthodes pour le résoudre.<br>
+        Dans le cadre de ce TP, on est amené à utiliser la méthode dite le parcourt DFS des graphs pour résoudre ce problème.
+    </p>
+  </div>
+  <div id="NetworkContainer">
+    <div id="network"></div>
+  </div>
+  <div id="Footer"><p>MANAOUIL Karim & HAMMOUCHE Nadir TPGO@2018 </p></div>
+  <button id="showModal" hidden=true type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal"></button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Les Points d'Articulations</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Noeud</th>
+                <th scope="col"># de composantes</th>
+              </tr>
+            </thead>
+            <tbody id="modal-table-body">
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/options.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
