@@ -1,0 +1,7 @@
+Simulation Design Sheet :
+
+    1- Blink selected node => blinkNode (graph, node).
+    2- Blink Edges => blinkEdges (graph, node).
+    3- Remove node & edges from graph
+    4- Show how many components
+    5- Add to final set if meets criteria
